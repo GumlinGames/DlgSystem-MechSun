@@ -71,6 +71,9 @@ class DLGSYSTEM_API IDlgDialogueParticipant
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Dialogue|Participant|Condition")
 	FName GetNameValue(FName ValueName) const;
 
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Dialogue|Participant|Condition")
+	FText GetTextValue(FName ValueName) const;
+
 	//
 	// Events
 	//

@@ -41,7 +41,10 @@ enum class EDlgTextArgumentType : uint8
 	//
 	// 1. Create a new Blueprint derived from DlgTextArgumentCustom (or DlgTextArgumentCustomHideCategories)
 	// 2. Override GetText
-	Custom						UMETA(DisplayName = "Custom Text Argument")
+	Custom			UMETA(DisplayName = "Custom Text Argument"),
+
+	// Calls GetPlayerNickname on the Participant
+	DialogueText	UMETA(DisplayName = "Dialogue Text Value")
 };
 
 /**

@@ -41,6 +41,9 @@ FFormatArgumentValue FDlgTextArgument::ConstructFormatArgumentValue(const UDlgCo
 		case EDlgTextArgumentType::ClassText:
 			return FFormatArgumentValue(FNYReflectionHelper::GetVariable<FTextProperty, FText>(Participant, VariableName));
 
+		case EDlgTextArgumentType::DialogueText:
+			return FFormatArgumentValue(IDlgDialogueParticipant::Execute_GetTextValue(Participant, VariableName));
+
 		case EDlgTextArgumentType::DisplayName:
 			return FFormatArgumentValue(IDlgDialogueParticipant::Execute_GetParticipantDisplayName(Participant, NodeOwner));
 
