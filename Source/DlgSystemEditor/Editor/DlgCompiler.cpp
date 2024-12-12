@@ -275,7 +275,7 @@ void FDlgCompilerContext::SetEdgesCategorization()
 		for (int32 i = 0; i < GraphNodeRoots.Num(); ++i)
 		{
 			TSet<const UDialogueGraphNode*> Path;
-			if (GetPathToNodeAsSet(GraphNodeRoots[0], GraphNode, Path))
+			if (GetPathToNodeAsSet(GraphNodeRoots[i], GraphNode, Path))
 			{
 				PathListToThisNodeSet.Add(Path);
 			}
